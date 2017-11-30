@@ -8,25 +8,75 @@
 
 
     <Button
+        android:id="@+id/buttonSortTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/buttonSortTime"
+        android:layout_toStartOf="@+id/buttonSortTime"
+        android:text="Title"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/buttonSortTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/buttonSortStartLocation"
+        android:layout_toStartOf="@+id/buttonSortStartLocation"
+        android:text="Time"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/buttonSortStartLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Start Location"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/buttonSortEndLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="End Location"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
         android:id="@+id/buttonSortDuration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonSortTitle"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_toLeftOf="@+id/buttonSortStartLocation"
+        android:layout_toStartOf="@+id/buttonSortStartLocation"
         android:text="Duration"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="72dp" />
 
     <Button
         android:id="@+id/buttonSortRunners"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-
-        android:layout_marginLeft="24dp"
-        android:layout_marginStart="24dp"
+        android:layout_alignBaseline="@+id/buttonSortDuration"
+        android:layout_alignBottom="@+id/buttonSortDuration"
         android:layout_toEndOf="@+id/buttonSortDuration"
         android:layout_toRightOf="@+id/buttonSortDuration"
         android:text="# of Runners"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="72dp" />
+
+    <Button
+        android:id="@+id/buttonSortFriends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonSortEndLocation"
+        android:layout_alignStart="@+id/buttonSortEndLocation"
+        android:layout_below="@+id/buttonSortStartLocation"
+        android:text="# of Friends"
+        tools:layout_editor_absoluteY="72dp" />
 
 </RelativeLayout>
