@@ -23,7 +23,6 @@
         <activity android:name=".ActivityCreateEvents" />
         <activity android:name=".ActivityPastEvents" />
         <activity android:name=".ActivityCreateAccount" />
-        <activity android:name=".MainActivityTemp"></activity>
     </application>
 
 </manifest>

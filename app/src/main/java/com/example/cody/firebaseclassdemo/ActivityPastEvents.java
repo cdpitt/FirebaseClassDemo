@@ -11,10 +11,31 @@ import android.widget.Button;
 
 public class ActivityPastEvents extends Activity implements Button.OnClickListener {
 
+    private Button buttonSortTitle, buttonSortTime, buttonSortStartLocation, buttonSortEndLocation, buttonSortDuration, buttonSortRunners, buttonSortFriends;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_past_events);
+
+        buttonSortTitle = (Button) findViewById(R.id.buttonSortTitle);
+        buttonSortTitle.setOnClickListener(this);
+        buttonSortTime = (Button) findViewById(R.id.buttonSortTime);
+        buttonSortTime.setOnClickListener(this);
+        buttonSortStartLocation = (Button) findViewById(R.id.buttonSortStartLocation);
+        buttonSortStartLocation.setOnClickListener(this);
+        buttonSortEndLocation = (Button) findViewById(R.id.buttonSortEndLocation);
+        buttonSortEndLocation.setOnClickListener(this);
+        buttonSortDuration = (Button) findViewById(R.id.buttonSortDuration);
+        buttonSortDuration.setOnClickListener(this);
+        //Sort by # of runners participating in the event
+        buttonSortRunners = (Button) findViewById(R.id.buttonSortRunners);
+        buttonSortRunners.setOnClickListener(this);
+        //Sort by # of friends participating in the event
+        buttonSortFriends = (Button) findViewById(R.id.buttonSortFriends);
+        buttonSortFriends.setOnClickListener(this);
+
     }
 
     @Override
