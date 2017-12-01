@@ -29,6 +29,8 @@ public class ActivityCreateEvents extends Activity implements Button.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_events);
 
+        //test
+
         buttonCreateEvent = (Button) findViewById(R.id.buttonCreateEvent);
         buttonCreateEvent.setOnClickListener(this);
         editTextTitle = (EditText) findViewById(R.id.editTextTitle);
