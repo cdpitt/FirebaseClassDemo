@@ -35,15 +35,15 @@ public class ActivityCreateEvents extends Activity implements View.OnClickListen
 
         //testnew
 
-        buttonCreateEvent = (Button) findViewById(R.id.buttonCreateEvent);
+        buttonCreateEvent = (Button) findViewById(R.id.buttonUpdateProfile);
         //set listener
         buttonCreateEvent.setOnClickListener(this);
 
-        editTextTitle = (EditText) findViewById(R.id.editTextTitle);
+        editTextTitle = (EditText) findViewById(R.id.editTextFirstName);
         editTextStartLocation = (EditText) findViewById(R.id.editTextStartLocation);
         editTextEndLocation = (EditText) findViewById(R.id.editTextEndLocation);
-        editTextStartTime = (EditText) findViewById(R.id.editTextStartTime);
-        editTextDuration = (EditText) findViewById(R.id.editTextDuration);
+        editTextStartTime = (EditText) findViewById(R.id.editTextLastName);
+        editTextDuration = (EditText) findViewById(R.id.editText);
         editTextLimit = (EditText) findViewById(R.id.editTextLimit);
         editTextInvites = (EditText) findViewById(R.id.editTextInvites);
         editTextDescription = (EditText) findViewById(R.id.editTextDescription);

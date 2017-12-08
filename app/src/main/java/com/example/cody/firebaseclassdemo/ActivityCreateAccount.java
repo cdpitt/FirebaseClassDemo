@@ -22,7 +22,7 @@ public class ActivityCreateAccount extends Activity implements Button.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
 
-        buttonCreateAccount = (Button) findViewById(R.id.buttonCreateEvent);
+        buttonCreateAccount = (Button) findViewById(R.id.buttonUpdateProfile);
         buttonCreateAccount.setOnClickListener(this);
 
         editTextFirstName = (EditText) findViewById(R.id.editTextFirstName);

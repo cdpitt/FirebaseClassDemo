@@ -15,6 +15,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import static android.content.ContentValues.TAG;
 
@@ -80,6 +82,10 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View view) {
 
+        //initializing Firebase database
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
+        DatabaseReference userRef = db.getReference("Users");
+
         //Catch values in EditText
         String email = editTextEmail.getText().toString();
         String password = editTextPassword.getText().toString();
@@ -91,6 +97,12 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         } else if (view == buttonRegister) {
             //Call the createAccount method
             createAccount(email, password);
+            //Additionally, create an initial record in the User object with user's email populated
+            //they can then edit other fields in "Edit Profile" activity
+            User newUser = new User("", "", email, "");
+            userRef.push().setValue(newUser);
+
+
         }
     }
 
